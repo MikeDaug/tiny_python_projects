@@ -13,12 +13,12 @@ def get_args():
     """Get command-line arguments"""
 
     parser = argparse.ArgumentParser(
-        description='Rock the Casbah',
+        description="Crow's Nest -- choose the correct article",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('positional',
-                        metavar='str',
-                        help='A positional argument')
+    parser.add_argument('word',
+                        metavar='word',
+                        help='A word')
 
     return parser.parse_args()
 
@@ -28,10 +28,11 @@ def main():
     """Make a jazz noise here"""
 
     args = get_args()
-    pos_arg = args.positional
-
-    print(f'str_arg = "{str_arg}"')
-
+    word = args.word
+    article = 'an' if word[0].lower() in 'aeiou' else 'a'
+    
+    print(f'Ahoy, Captain, {article} {word} off the larboard bow!')
+        
 
 # --------------------------------------------------
 if __name__ == '__main__':
