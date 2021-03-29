@@ -43,7 +43,7 @@ def test_consonant():
 
 # --------------------------------------------------
 def test_consonant_upper():
-    """brigantine -> a Brigatine"""
+    """brigantine -> A Brigatine"""
 
     for word in consonant_words:
         out = getoutput(f'{prg} {word.title()}')
@@ -61,7 +61,7 @@ def test_vowel():
 
 # --------------------------------------------------
 def test_vowel_upper():
-    """octopus -> an Octopus"""
+    """octopus -> An Octopus"""
 
     for word in vowel_words:
         out = getoutput(f'{prg} {word.upper()}')
